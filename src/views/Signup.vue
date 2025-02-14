@@ -2,7 +2,7 @@
   <div>
     <h1>회원가입</h1>
     <img :src="profileImage" alt="프로필 이미지" v-if="profileImage" />
-    <p>카카오 ID: {{ kakaoAuthId }}</p>
+    <p>이름: {{ name }}</p>
 
     <form @submit.prevent="submitSignup">
       <label>닉네임</label>
@@ -31,10 +31,12 @@ const router = useRouter();
 const authStore = useAuthStore();
 
 onMounted(() => {
-  const query = new URLSearchParams(window.location.search);
-  kakaoAuthId.value = query.get("kakaoAuthId");
-  name.value = query.get("name");
-  profileImage.value = query.get("profileImage");
+  const urlParams = new URLSearchParams(window.location.search);
+  kakaoAuthId.value = urlParams.get("kakaoAuthId");
+  name.value = urlParams.get("name");
+  profileImage.value = urlParams.get("profileImage");
+  router.replace("/signup");
+  console.log(kakaoAuthId);
 });
 
 const submitSignup = async () => {
@@ -56,8 +58,9 @@ const submitSignup = async () => {
       throw new Error("회원가입 실패 response data failed");
 
     // ✅ 서버에서 accessToken과 refreshToken을 응답받음
-    const accessToken = response.headers["accessToken"];
-    const refreshToken = response.headers["refreshToken"];
+    const accessToken = response.headers.get("accessToken");
+    const refreshToken = response.headers.get("refreshToken");
+
     console.log(accessToken);
     console.log(refreshToken);
     // ✅ JWT 저장 (localStorage + Pinia 상태)
