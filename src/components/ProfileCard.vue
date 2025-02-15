@@ -8,22 +8,15 @@ defineProps({
 </script>
 
 <template>
-    <div class="card-body profiles_body">
-      <ul class="profiles">
-        <li
-          v-for="profile in profiles"
-          :key="profile.name"
-        >
-          <div class="d-flex bd-highlight">
-            <div class="img_cont">
-              <img :src="profile.img" class="rounded-circle user_img" />
-            </div>
-            <div class="user_info">
-              <span class="name">{{ profile.name }}</span>
-              <span class="message">{{ profile.status }}</span>
-            </div>
-          </div>
-        </li>
-      </ul>
+  <div class="card-body profiles_body">
+    <div class="d-flex bd-highlight">
+      <div class="img_cont">
+        <img :src="profileImage" class="rounded-circle user_img" />
+      </div>
+      <div class="user_info">
+        <span class="name">{{ name }}</span>
+        <span class="message">{{ statusMessage }}</span>
+      </div>
     </div>
-  </template>
+  </div>
+</template>

@@ -102,19 +102,19 @@ background-color: rgba(0,0,0,0.3) !important;
 }
 .profiles li{
   width: 100% !important;
-  padding: 10px 12px;
+  padding: 0px 12px;
   /* margin-bottom: 15px !important; */
 }
 .active{
   background-color: #cce4ff;
 }
 .user_img{
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   border:1px solid #f5f6fa;
 
 }
-.user_img_msg{
+/* .user_img_msg{
   height: 40px;
   width: 40px;
   border:1.5px solid #f5f6fa;
@@ -128,20 +128,21 @@ background-color: rgba(0,0,0,0.3) !important;
 .img_cont_msg{
   height: 40px;
   width: 40px;
-}
+} */
 .user_info{
   display: flex;
   flex-direction: column;  /* 세로 방향으로 배치 */
-margin-top: auto;
-margin-bottom: auto;
-margin-left: 15px;
+  align-items: flex-start; /* 왼쪽 정렬 */
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 15px;
 }
 .name {
-font-size: 20px;
+font-size: 15px;
 color: black;
 }
 .message{
-font-size: 12px;
+font-size: 10px;
 color: rgba(73, 72, 72, 0.6);
 }
 .video_cam{
@@ -228,6 +229,6 @@ background-color: rgba(0,0,0,0.2);
 }
 @media(max-width: 576px){
 .profiles_card{
-margin-bottom: 15px !important;
+margin-bottom: 10px !important;
 }
 }
