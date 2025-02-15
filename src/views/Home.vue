@@ -1,21 +1,23 @@
 <script setup>
 import { onMounted } from "vue";
 import { useRouter } from "vue-router";
+import ProfileCard from "@/components/ProfileCard.vue";
+import api from "@/utils/axios";
 
 const router = useRouter();
 
-onMounted(() => {
+onMounted(async () => {
   // 현재 URL에서 accessToken 가져오기 (기존 회원의 경우)
   const urlParams = new URLSearchParams(window.location.search);
   const accessToken = urlParams.get("accessToken");
   console.log("현재 URL:", window.location.href);
   console.log("추출한 accessToken:", accessToken);
   if (accessToken) {
-    // localStorage에 토큰 저장 
+    // localStorage에 토큰 저장
     localStorage.setItem("accessToken", accessToken);
     console.log(accessToken);
     // accessToken이 URL에 노출되지 않도록 제거하고 /home으로 이동
-    router.replace("/home");
+    await router.replace("/home");
   }
 });
 </script>
@@ -23,5 +25,10 @@ onMounted(() => {
 <template>
   <div>
     <h1>홈 페이지</h1>
+    <!-- <ProfileCard
+      :profileImage="myImage"
+      :nickname="myName"
+      :statusMessage="myStatus"
+    /> -->
   </div>
 </template>

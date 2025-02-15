@@ -63,6 +63,7 @@ const submitSignup = async () => {
 
     console.log(accessToken);
     console.log(refreshToken);
+    
     // ✅ JWT 저장 (localStorage + Pinia 상태)
     authStore.setToken(accessToken, refreshToken);
 
