@@ -8,7 +8,7 @@ body,html{
   height: 100vh;
   margin: 0;
   display: flex;
-  justify-content: center; /* 가로 중앙 정렬 */
+  justify-content: center;
   align-items: center; 
 
 }
@@ -27,13 +27,14 @@ body,html{
 }
 
 .chat{
+  width:480px;
   margin-top: auto;
   margin-bottom: auto;
 }
 .card{
   height: 500px;
-  border-radius: 15px !important;
-  background-color: rgba(0, 0, 0, 0.4) !important;
+  border: 0 !important;
+  /* background-color: rgba(255, 255, 255, 0.4) !important; */
 }
 .profiles_body{
   padding:  0.75rem 0 !important;
@@ -44,11 +45,10 @@ body,html{
   overflow-y: auto;
 }
 .card-header{
-  border-radius: 15px 15px 0 0 !important;
   border-bottom: 0 !important;
 }
 .card-footer{
-border-radius: 0 0 15px 15px !important;
+
   border-top: 0 !important;
 }
 .container{
@@ -65,7 +65,7 @@ border-radius: 0 0 15px 15px !important;
        outline:0px !important;
 }
 .type_msg{
-  background-color: rgba(0,0,0,0.3) !important;
+  background-color: rgba(255, 255, 255, 0) !important;
   border:0 !important;
   color:black !important;
   height: 60px !important;
@@ -114,7 +114,7 @@ background-color: rgba(0,0,0,0.3) !important;
   border:1px solid #f5f6fa;
 
 }
-/* .user_img_msg{
+.user_img_msg{
   height: 40px;
   width: 40px;
   border:1.5px solid #f5f6fa;
@@ -128,7 +128,7 @@ background-color: rgba(0,0,0,0.3) !important;
 .img_cont_msg{
   height: 40px;
   width: 40px;
-} */
+}
 .user_info{
   display: flex;
   flex-direction: column;  /* 세로 방향으로 배치 */
@@ -156,28 +156,31 @@ cursor: pointer;
 margin-right: 20px;
 }
 .msg_cotainer{
+  font-size: 15px;
 margin-top: auto;
 margin-bottom: auto;
 margin-left: 10px;
 border-radius: 25px;
-background-color: #82ccdd;
+background-color: #bcbcbc;
 padding: 10px;
 position: relative;
 }
 .msg_cotainer_send{
+font-size: 15px;
 margin-top: auto;
 margin-bottom: auto;
 margin-right: 10px;
 border-radius: 25px;
-background-color: #78e08f;
+background-color: #3395ff;
 padding: 10px;
 position: relative;
 }
 .msg_time{
 position: absolute;
+margin-left: 10px;
 left: 0;
 bottom: -15px;
-color: rgba(255,255,255,0.5);
+color: rgba(72, 72, 72, 0.5);
 font-size: 10px;
 }
 .msg_time_send{

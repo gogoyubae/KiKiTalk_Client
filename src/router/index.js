@@ -5,6 +5,7 @@ import Home from '@/views/Home.vue'
 import Signup from '@/views/Signup.vue'
 import Login from '@/views/Login.vue'
 import Friends from '@/views/Friends.vue'
+import Chat from '@/views/Chat.vue'
 
 
 
@@ -30,6 +31,11 @@ const router = createRouter({
       path:'/friends',
       name:'Friends',
       component: Friends,
+    },
+    {
+      path:'/chat',
+      name:'Chat',
+      component: Chat,
     }
   ],
 })
