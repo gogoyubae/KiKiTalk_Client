@@ -6,7 +6,7 @@ import Signup from '@/views/Signup.vue'
 import Login from '@/views/Login.vue'
 import Friends from '@/views/Friends.vue'
 import Chat from '@/views/Chat.vue'
-
+import Example from '@/views/Example.vue'
 
 
 const router = createRouter({
@@ -36,6 +36,11 @@ const router = createRouter({
       path:'/chat',
       name:'Chat',
       component: Chat,
+    },
+    {
+      path:'/example',
+      name:'Example',
+      component: Example,
     }
   ],
 })

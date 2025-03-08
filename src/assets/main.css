@@ -33,6 +33,7 @@ body,html{
 }
 .card{
   height: 500px;
+
   border: 0 !important;
   /* background-color: rgba(255, 255, 255, 0.4) !important; */
 }
@@ -42,6 +43,7 @@ body,html{
   white-space: nowrap;
 }
 .msg_card_body{
+  height: 600px; /* 적절한 높이 설정 */
   overflow-y: auto;
 }
 .card-header{
@@ -122,8 +124,8 @@ background-color: rgba(0,0,0,0.3) !important;
 }
 .img_cont{
   position: relative;
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
 }
 .img_cont_msg{
   height: 40px;
@@ -155,17 +157,17 @@ font-size: 20px;
 cursor: pointer;
 margin-right: 20px;
 }
-.msg_cotainer{
+.msg_container{
   font-size: 15px;
 margin-top: auto;
 margin-bottom: auto;
 margin-left: 10px;
 border-radius: 25px;
-background-color: #bcbcbc;
+background-color: #f4f2f2;
 padding: 10px;
 position: relative;
 }
-.msg_cotainer_send{
+.msg_container_send{
 font-size: 15px;
 margin-top: auto;
 margin-bottom: auto;
@@ -195,10 +197,11 @@ position: relative;
 }
 #action_menu_btn{
 position: absolute;
-right: 10px;
-top: 10px;
-color: black;
+right: 25px;
+top: 50%; /* 상단에서 50% 위치 */
+transform: translateY(-50%); /* 정확히 중앙 정렬 */
 cursor: pointer;
+color: black;
 font-size: 20px;
 }
 .action_menu{

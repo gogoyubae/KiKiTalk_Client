@@ -15,4 +15,20 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  define: {
+    global: "window",
+  },
+  server: {
+    proxy: {
+      "/socket": {
+        target: "http://localhost:8080",
+        changeOrigin: true,
+        ws: true, // WebSocket 프록시 활성화
+      },
+      "/api": {
+        target: "http://localhost:8080",
+        changeOrigin: true,
+      },
+    },
+  },
 })
