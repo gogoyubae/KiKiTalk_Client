@@ -4,7 +4,6 @@ import { useAuthStore } from '@/stores/auth'
 import Home from '@/views/Home.vue'
 import Signup from '@/views/Signup.vue'
 import Login from '@/views/Login.vue'
-import Friends from '@/views/Friends.vue'
 import Chat from '@/views/Chat.vue'
 import Example from '@/views/Example.vue'
 
@@ -26,11 +25,6 @@ const router = createRouter({
       path:'/login',
       name:'Login',
       component: Login,
-    },
-    {
-      path:'/friends',
-      name:'Friends',
-      component: Friends,
     },
     {
       path:'/chat',

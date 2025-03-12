@@ -17,7 +17,8 @@ const kakaoLogin = () => {
 .kakao-button {
   cursor: pointer;
   display: block; /* 인라인 요소가 아닌 블록 요소로 변경 */
-  height: auto;
+  margin-top: 420px;
+  justify-content: center; /* 세로 중앙 정렬 */
   transition: opacity 0.2s ease-in-out;
 }
 

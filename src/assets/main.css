@@ -12,6 +12,10 @@ body,html{
   align-items: center; 
 
 }
+li {
+  list-style: none;
+  height:70px;
+}
 
 /* 웹앱 컨테이너 스타일 */
 .app-container {
@@ -28,7 +32,7 @@ body,html{
 
 .chat{
   width:480px;
-  margin-top: auto;
+  margin-top: 10px;
   margin-bottom: auto;
 }
 .card{
@@ -58,7 +62,6 @@ body,html{
 }
 .search{
   border-radius: 15px 0 0 15px !important;
-  background-color: rgba(0,0,0,0.3) !important;
   border:0 !important;
   color:black !important;
 }
@@ -92,8 +95,7 @@ background-color: rgba(0,0,0,0.3) !important;
   cursor: pointer;
 }
 .search_btn{
-  border-radius: 0 15px 15px 0 !important;
-  background-color: rgba(0,0,0,0.3) !important;
+  margin-top: 4px;
   border:0 !important;
   color: black !important;
   cursor: pointer;
@@ -105,6 +107,7 @@ background-color: rgba(0,0,0,0.3) !important;
 .profiles li{
   width: 100% !important;
   padding: 0px 12px;
+  
   /* margin-bottom: 15px !important; */
 }
 .active{
@@ -138,6 +141,12 @@ background-color: rgba(0,0,0,0.3) !important;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 15px;
+}
+.add_friend {
+  align-items: flex-end;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 200px;
 }
 .name {
 font-size: 15px;

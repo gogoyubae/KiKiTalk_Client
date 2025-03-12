@@ -4,8 +4,8 @@ import { RouterView } from "vue-router";
 
 <template>
   <container class="app-container">
+    <header class="header">KiKiTalk</header>
     <div class="home">
-      <header class="header">KiKiTalk</header>
     </div>
 
     <RouterView />
@@ -16,7 +16,7 @@ import { RouterView } from "vue-router";
 .app-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* 세로 중앙 정렬 */
+
   align-items: center; /* 가로 중앙 정렬 */
   height: 100vh; /* 전체 높이 */
   text-align: center;
