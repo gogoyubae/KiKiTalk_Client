@@ -5,13 +5,13 @@
         <div class="d-flex bd-highlight">
           <div class="img_cont">
             <img
-              src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg"
+              src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1143&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               class="rounded-circle user_img"
             />
           </div>
           <div class="user_info">
-            <span class="name">한예인</span>
-            <span class="message">all my people hello hello</span>
+            <span class="name">신동의</span>
+            <span class="message">카톡 안됨 x 전화 주세요</span>
           </div>
         </div>
         <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
@@ -32,7 +32,7 @@
           <div v-if="item.username !== username">
             <div class="img_cont_msg">
               <img
-                src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg"
+                src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1143&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 class="rounded-circle user_img_msg"
               />
             </div>
@@ -127,7 +127,6 @@ const send = () => {
       content: message.value,
       timeStamp: new Date().toLocaleTimeString(),
     };
-    messageList.value.push(msg);
     stompClient.send("/receive", JSON.stringify(msg), {});
   }
 };
